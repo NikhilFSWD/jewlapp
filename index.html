@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<title>Online Jewellery Store</title>
+
+<style>
+    .prod {
+        width: 300px;
+        height: 300px;
+        border: 2px solid black;
+    }
+
+</style>
+
+<body>
+    <button onclick="sort()">price low</button>
+    <div class="main" style="display: flex; border: 1px solid black; flex-wrap: wrap; width: 500px;">
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>
+
+<script>
+
+    function addcart() {
+
+
+
+        cont admin = [
+
+            {
+                name: "nikhil",
+                price: "5000",
+                image: "imag1"
+            },
+
+            {
+                name: "nikhil",
+                price: "5000",
+                image: "imag1"
+            },
+
+            {
+                name: "nikhil",
+                price: "5000",
+                image: "imag1"
+            },
+
+
+
+        ]
+
+        localStorage.setItem('dis', JSON.stringify(admin));
+    }
+    addcart();
+
+
+    function display(jewl) {
+
+        var main = document.getElementById('main');
+        mainn.textContent = "";
+        jewl.forEach(function (e) {
+
+
+
+            var nam = document.createElement('p');
+            var pri = document.createElement('p');
+
+            nam.innerText = e.name;
+            console.log(nam);
+
+            pri.innerText = e.price;
+            let img = document.createElement('img');
+
+
+
+            img.src = e.image
+
+            var div = document.createElement('div');
+
+            div.classList = "prod";
+            div.append(name, pri, img);
+
+            mainn.append(div);
+        });
+    }
+    display(JSON.parse(localStorage.getItem('dis')));
+
+
+
+    function sort() {
+        let a = JSON.pase(localStorage.getItem('dis'));
+
+        var sortaa = a.sort(function (c, b) {
+            return c.price - b.price;
+
+        })
+        display(sortaa)
+    }
+
+    function addcart(obj) {
+        vo = JSON.pase(localStorage.getItem('cart'));
+
+        let arr;
+        arr = localStorage.getItem('cart');
+
+        if (arr == null) {
+            arr = [];
+
+        }
+        else {
+            arr = JSON.pase(localStorage.getItem('cart'));
+        }
+
+        arr.push(obj);
+        localStorage.setItem('cart', JSON.stringify(arr));
+    }
+
+
+
+
+
+
+
+
+
+</script>

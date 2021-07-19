@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<style>
+    #m1 {
+
+        width: 500px;
+        height: 200px;
+        border: 1px solid black;
+
+
+    }
+
+</style>
+
+<body>
+    <h1>payment process</h1>
+
+
+    <form id="m1">
+        <label>Enter card number</label>
+        <input type="number" placeholder="Enter card no">
+
+        <br>
+
+        <label>name of bank</label>
+        <input type="text" placeholder="Enter name of bank">
+        <br>
+
+        <label>Enter expire year</label>
+        <input type="number" placeholder="Enter expire date">
+        <br>
+
+        <label>Enter Cvv</label>
+        <input type="number" placeholder="Enter Cvv">
+        <br>
+
+
+    </form>
+    <button onclick="payment()" id="main">Place order</button>
+
+    <div id="nikhil"></div>
+
+
+</body>
+
+</html>
+
+<script>
+    function payment() {
+
+        var nikhil = document.getElementById('nikhil');
+
+        setTimeout(function () {
+            nikhil.innerText = "your order place successfully";
+        }, 3000);
+
+    }
+
+
+
+
+</script>
